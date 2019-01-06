@@ -58,7 +58,7 @@ export default class App extends React.Component {
           style={{ flex: 1, flexDirection: "row" }}
           title="Login"
           onPress={() =>
-            AlertIOS.prompt("working on it", "My Alert Msg", [
+            Alert.alert.prompt("working on it", "My Alert Msg", [
               {
                 text: "damn it",
                 onPress: () => console.log("damn it pressed")
@@ -71,7 +71,7 @@ export default class App extends React.Component {
         <Button
           title="RESUME"
           onPress={() =>
-            AlertIOS.prompt(
+            Alert.alert.prompt(
               "RESUME",
               "coming soon",
               "don`t be mad",
@@ -89,7 +89,7 @@ export default class App extends React.Component {
         <Button
           title="Don`t be Disturbed"
           onPress={() =>
-            AlertIOS.prompt("working on this too", "My Alert Msg", [
+            Alert.alert.prompt("working on this too", "My Alert Msg", [
               {
                 text: "damn it",
                 onPress: () => console.log("damn it pressed")
