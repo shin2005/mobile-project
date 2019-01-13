@@ -20,8 +20,6 @@ const AppNavigator = createStackNavigator({
 const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
-  onButtonPress() {}
-  state = { text: "" };
   render() {
     return (
       <>
