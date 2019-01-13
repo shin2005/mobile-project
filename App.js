@@ -9,7 +9,11 @@ import {
   Text
 } from "react-native";
 
-import { AppContainer, createAppContainer } from "react-navigation";
+import {
+  AppContainer,
+  createAppContainer,
+  createStackNavigator
+} from "react-navigation";
 
 const AppNavigator = createStackNavigator({
   Home: {
