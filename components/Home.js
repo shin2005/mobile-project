@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AlertIOS,
-  Button,
-  StyleSheet,
-  View,
-  TextInput,
-  Image,
-  Text
-} from 'react-native';
+import { AlertIOS, Button, Image, Text, TextInput, View } from 'react-native';
 
 export default class Home extends Component {
   state = {
