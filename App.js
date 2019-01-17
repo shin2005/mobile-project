@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   AlertIOS,
   Button,
@@ -7,36 +7,35 @@ import {
   TextInput,
   Image,
   Text
-} from "react-native";
+} from 'react-native';
 
-export default class App extends React.Component {
-  onButtonPress() {}
-  state = { text: "" };
+export default class App extends Component {
+  state = { text: '' };
   render() {
     return (
       <View style={styles.container}>
         <Text
           style={{
             fontSize: 20,
-            fontWeight: "bold",
-            textAlign: "center",
+            fontWeight: 'bold',
+            textAlign: 'center',
             marginBottom: 10,
-            color: "rgb(51, 14, 199)"
+            color: 'rgb(51, 14, 199)'
           }}
         >
           Keep at it!!!
         </Text>
         <Image
-          source={require("./img/blackhole.jpeg")}
+          source={require('./img/blackhole.jpeg')}
           style={styles.backgroundImage}
         />
         <TextInput
           style={{
             height: 40,
-            borderColor: "black",
-            borderStyle: "solid",
+            borderColor: 'black',
+            borderStyle: 'solid',
             borderWidth: 0.5,
-            textAlign: "right"
+            textAlign: 'right'
           }}
           placeholder="username@email.com or phone number"
           onChangeText={text => this.setState({ text })}
@@ -44,10 +43,10 @@ export default class App extends React.Component {
         <TextInput
           style={{
             height: 40,
-            borderColor: "black",
-            borderStyle: "solid",
+            borderColor: 'black',
+            borderStyle: 'solid',
             borderWidth: 0.5,
-            textAlign: "right"
+            textAlign: 'right'
           }}
           placeholder="password"
           onChangeText={text => this.setState({ text })}
@@ -55,33 +54,33 @@ export default class App extends React.Component {
         />
         <Button
           Button
-          style={{ flex: 1, flexDirection: "row" }}
+          style={{ flex: 1, flexDirection: 'row' }}
           title="Login"
           onPress={() =>
-            Alert.alert.prompt("working on it", "My Alert Msg", [
+            AlertIOS.prompt('working on it', 'My Alert Msg', [
               {
-                text: "damn it",
-                onPress: () => console.log("damn it pressed")
+                text: 'damn it',
+                onPress: () => console.log('damn it pressed')
               },
-              { text: "Fine", onPress: () => console.log("Fine Pressed") },
-              { text: "OK", onPress: () => console.log("OK Pressed") }
+              { text: 'Fine', onPress: () => console.log('Fine Pressed') },
+              { text: 'OK', onPress: () => console.log('OK Pressed') }
             ])
           }
         />
         <Button
           title="RESUME"
           onPress={() =>
-            Alert.alert.prompt(
-              "RESUME",
-              "coming soon",
-              "don`t be mad",
-              "Don`t Panic!",
+            AlertIOS.prompt(
+              'RESUME',
+              'coming soon',
+              'don`t be mad',
+              'Don`t Panic!',
               [
                 {
-                  text: "come on",
-                  onPress: () => console.log("come on pressed")
+                  text: 'come on',
+                  onPress: () => console.log('come on pressed')
                 },
-                { text: "OK", onPress: () => console.log("OK pressed") }
+                { text: 'OK', onPress: () => console.log('OK pressed') }
               ]
             )
           }
@@ -89,18 +88,18 @@ export default class App extends React.Component {
         <Button
           title="Don`t be Disturbed"
           onPress={() =>
-            Alert.alert.prompt("working on this too", "My Alert Msg", [
+            AlertIOS.prompt('working on this too', 'My Alert Msg', [
               {
-                text: "damn it",
-                onPress: () => console.log("damn it pressed")
+                text: 'damn it',
+                onPress: () => console.log('damn it pressed')
               },
               {
-                text: "Fine",
-                onPress: () => console.log("Fine pressed")
+                text: 'Fine',
+                onPress: () => console.log('Fine pressed')
               },
               {
-                text: "OK",
-                onPress: () => console.log("OK Pressed")
+                text: 'OK',
+                onPress: () => console.log('OK Pressed')
               }
             ])
           }
@@ -112,9 +111,9 @@ export default class App extends React.Component {
         />
         <Text style={{ padding: 10, fontSize: 42 }}>
           {this.state.text
-            .split(" ")
-            .map(word => word && "")
-            .join(" ")}
+            .split(' ')
+            .map(word => word && '')
+            .join(' ')}
         </Text>
       </View>
     );
@@ -124,12 +123,12 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   backgroundImage: {
     flex: 10,
-    resizeMode: "center"
+    resizeMode: 'center'
   }
 });
